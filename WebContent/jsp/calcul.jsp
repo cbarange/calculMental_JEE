@@ -19,6 +19,7 @@
 	</div>
 	<div class="row small-8 small-centered">
 	<p>Calcul : ${ sessionScope.calcul.calcul}</p>
+	<p>NE PAS REGARDER :<span id="resultat">SOLUTION: ${ sessionScope.calcul.resultat}</span></p>
 	
 	<form method="POST" action="calcul">
 		<input name="form-reponse" type="number" step="any">
@@ -57,5 +58,14 @@
 				});
 			});
 		</script>
+		<style>
+		#resultat{
+			background-color: gray;
+			color:gray;
+		}
+		#resultat:hover{
+			background-color: white;
+		}
+		</style>
 </body>
 </html>
