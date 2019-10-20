@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>calcul_mental_cb</display-name>
+  
+  <context-param>
+		<param-name>DS_MODE</param-name>
+		<param-value>JDBC</param-value>
+	</context-param>
+	<context-param>
+		<param-name>DB_DRIVER</param-name>
+		<param-value>org.mariadb.jdbc.Driver</param-value>
+		<!-- <param-value>com.mysql.cj.jdbc.Driver</param-value>  -->
+	</context-param>
+	<context-param>
+		<param-name>DB_URL</param-name>
+		<param-value>jdbc:mariadb://localhost:3306/calculMental?useSSL=false&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</param-value>
+		<!-- jdbc:mysql://localhost:3306/calculMental?serverTimezone=UTC -->
+	</context-param>
+	<context-param>
+		<param-name>DB_LOGIN</param-name>
+		<param-value>admin</param-value>
+	</context-param>
+	<context-param>
+		<param-name>DB_PWD</param-name>
+		<param-value>patate</param-value>
+	</context-param>
+	
+	<session-config>
+		<session-timeout>1</session-timeout>
+	</session-config>
+	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<page-encoding>UTF-8</page-encoding>
+			<include-prelude>/jsp/tags_lib.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>accueil</welcome-file>
+  </welcome-file-list>
+</web-app>
